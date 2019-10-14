@@ -12,6 +12,7 @@ Pod::Spec.new do |s|
   s.source   = { :git => package['repository']['url'], :tag => "v#{s.version}" }
 
   s.ios.deployment_target = '8.0'
+  s.tvOS.deployment_target = '12.0'
   s.osx.deployment_target = '10.10'
 
   s.preserve_paths = 'README.md', 'LICENSE', 'package.json', 'sqlite.js'
