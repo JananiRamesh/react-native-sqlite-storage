@@ -10,6 +10,10 @@
 		C7DCD6E41BE0295900F3300E /* SQLite.h in Headers */ = {isa = PBXBuildFile; fileRef = C7DCD6E21BE0295900F3300E /* SQLite.h */; };
 		C7DCD6E51BE0295A00F3300E /* SQLite.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DCD6E31BE0295900F3300E /* SQLite.m */; };
 		C7DCD7141BE2D5DE00F3300E /* SQLiteResult.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DCD7131BE2D5DE00F3300E /* SQLiteResult.m */; };
+		FE0427D3234C92C700A4D311 /* SQLite_tvOS.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FE0427D0234C92C700A4D311 /* SQLite_tvOS.h */; };
+		FE0427D7234CA06D00A4D311 /* SQLite.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DCD6E31BE0295900F3300E /* SQLite.m */; };
+		FE0427D8234CA07900A4D311 /* SQLiteResult.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DCD7131BE2D5DE00F3300E /* SQLiteResult.m */; };
+		FE0427DA234CA09600A4D311 /* SQLite.h in Headers */ = {isa = PBXBuildFile; fileRef = C7DCD6E21BE0295900F3300E /* SQLite.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -22,6 +26,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FE0427CC234C92C700A4D311 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				FE0427D3234C92C700A4D311 /* SQLite_tvOS.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -30,10 +44,20 @@
 		C7DCD7131BE2D5DE00F3300E /* SQLiteResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLiteResult.m; sourceTree = "<group>"; };
 		C7DCD7151BE2D61E00F3300E /* SQLiteResult.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQLiteResult.h; sourceTree = "<group>"; };
 		E23D7B471ACEFE2A00C59171 /* libSQLite.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSQLite.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE0427CE234C92C700A4D311 /* libSQLite-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libSQLite-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE0427D0234C92C700A4D311 /* SQLite_tvOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQLite_tvOS.h; sourceTree = "<group>"; };
+		FE0427D1234C92C700A4D311 /* SQLite_tvOS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SQLite_tvOS.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		E23D7B441ACEFE2A00C59171 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE0427CB234C92C700A4D311 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -58,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				C7DCD6E11BE0293D00F3300E /* SQLite */,
+				FE0427CF234C92C700A4D311 /* SQLite-tvOS */,
 				E23D7B481ACEFE2A00C59171 /* Products */,
 			);
 			indentWidth = 2;
@@ -68,8 +93,18 @@
 			isa = PBXGroup;
 			children = (
 				E23D7B471ACEFE2A00C59171 /* libSQLite.a */,
+				FE0427CE234C92C700A4D311 /* libSQLite-tvOS.a */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		FE0427CF234C92C700A4D311 /* SQLite-tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				FE0427D0234C92C700A4D311 /* SQLite_tvOS.h */,
+				FE0427D1234C92C700A4D311 /* SQLite_tvOS.m */,
+			);
+			path = "SQLite-tvOS";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -80,6 +115,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7DCD6E41BE0295900F3300E /* SQLite.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE0427D9234CA08E00A4D311 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE0427DA234CA09600A4D311 /* SQLite.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +147,24 @@
 			productReference = E23D7B471ACEFE2A00C59171 /* libSQLite.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		FE0427CD234C92C700A4D311 /* SQLite-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FE0427D6234C92C700A4D311 /* Build configuration list for PBXNativeTarget "SQLite-tvOS" */;
+			buildPhases = (
+				FE0427D9234CA08E00A4D311 /* Headers */,
+				FE0427CA234C92C700A4D311 /* Sources */,
+				FE0427CB234C92C700A4D311 /* Frameworks */,
+				FE0427CC234C92C700A4D311 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SQLite-tvOS";
+			productName = "SQLite-tvOS";
+			productReference = FE0427CE234C92C700A4D311 /* libSQLite-tvOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -116,6 +177,11 @@
 					E23D7B461ACEFE2A00C59171 = {
 						CreatedOnToolsVersion = 6.1.1;
 					};
+					FE0427CD234C92C700A4D311 = {
+						CreatedOnToolsVersion = 10.3;
+						DevelopmentTeam = 97243GD77A;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = E23D7B421ACEFE2A00C59171 /* Build configuration list for PBXProject "SQLite" */;
@@ -123,6 +189,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = E23D7B3E1ACEFE2A00C59171;
@@ -131,6 +198,7 @@
 			projectRoot = "";
 			targets = (
 				E23D7B461ACEFE2A00C59171 /* SQLite */,
+				FE0427CD234C92C700A4D311 /* SQLite-tvOS */,
 			);
 		};
 /* End PBXProject section */
@@ -142,6 +210,15 @@
 			files = (
 				C7DCD7141BE2D5DE00F3300E /* SQLiteResult.m in Sources */,
 				C7DCD6E51BE0295A00F3300E /* SQLite.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE0427CA234C92C700A4D311 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE0427D8234CA07900A4D311 /* SQLiteResult.m in Sources */,
+				FE0427D7234CA06D00A4D311 /* SQLite.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +352,58 @@
 			};
 			name = Release;
 		};
+		FE0427D4234C92C700A4D311 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 97243GD77A;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 12.0;
+			};
+			name = Debug;
+		};
+		FE0427D5234C92C700A4D311 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 97243GD77A;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 12.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -292,6 +421,15 @@
 			buildConfigurations = (
 				E23D7B5C1ACEFE2A00C59171 /* Debug */,
 				E23D7B5D1ACEFE2A00C59171 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FE0427D6234C92C700A4D311 /* Build configuration list for PBXNativeTarget "SQLite-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE0427D4234C92C700A4D311 /* Debug */,
+				FE0427D5234C92C700A4D311 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
