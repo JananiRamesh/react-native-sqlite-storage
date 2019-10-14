@@ -4,7 +4,7 @@ target 'AwesomeProject' do
   pod 'React', :path => '../node_modules/react-native'
   pod 'react-native-sqlite-storage', :path => '../node_modules/react-native-sqlite-storage'
 end
-platform :tvOS, '12.0'
+platform :tvos, '10.0'
 target 'AwesomeProject' do
   pod 'yoga', :path => '../node_modules/react-native/ReactCommon/yoga'
   pod 'React', :path => '../node_modules/react-native'
